@@ -7,7 +7,8 @@ using UnityEngine;
 
 public class StoreManager : MonoBehaviour
 {
-    private int availableCurrency = 1000;
+    public int AvailableCurrency { get; private set; } = 1000;
+
     [SerializeField]
     private Dictionary<Guid,PlantData> currentStock;
     [SerializeField]
@@ -63,9 +64,19 @@ public class StoreManager : MonoBehaviour
         PlantData plantData;
         if (currentStock.TryGetValue(guid, out plantData))
         {
-            Debug.Log("Bought:: "+plantData.plantName+" for:: "+plantData.price);
-            Plant plant = Instantiate(PlantManager.Instance.plantPrefab);
-            plant.PlantData = plantData;
+            if (AvailableCurrency - plantData.price < 0)
+            {
+                Debug.Log("STORE_NOT_ENOUGH_CASH");
+                EventManager.TriggerEvent("STORE_NOT_ENOUGH_CASH");
+            }
+            else
+            {
+                AvailableCurrency -= plantData.price;
+                Debug.Log("Bought:: "+plantData.plantName+" for:: "+plantData.price);
+                Plant plant = Instantiate(PlantManager.Instance.plantPrefab);
+                plant.PlantData = plantData;
+                EventManager.TriggerEvent("ITEM_BOUGHT");
+            }
         }
     }
 

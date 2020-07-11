@@ -1,18 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using Managers;
+using TMPro;
 using UnityEngine;
 
-public class MoneyCounter : MonoBehaviour
+namespace UIElements
 {
-    // Start is called before the first frame update
-    void Start()
+    public class MoneyCounter : MonoBehaviour
     {
-        
-    }
+        [SerializeField]
+        private TextMeshProUGUI moneyText;
+        private void Awake()
+        {
+            moneyText = GetComponent<TextMeshProUGUI>();
+            moneyText.SetText(StoreManager.Instance.AvailableCurrency.ToString());
+            EventManager.StartListening("ITEM_BOUGHT", UpdateText);
+            EventManager.StartListening("ITEM_SOLD", UpdateText);
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void UpdateText()
+        {
+            moneyText.text = StoreManager.Instance.AvailableCurrency.ToString();
+        }
     }
 }

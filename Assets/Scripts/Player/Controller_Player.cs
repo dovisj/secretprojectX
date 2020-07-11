@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Managers;
+using Plants;
 using UnityEngine;
 
 public class Controller_Player : MonoBehaviour
@@ -33,8 +35,17 @@ public class Controller_Player : MonoBehaviour
             ref_held_object = script_grab_zone.GetGrabObj();
         }
         else // Already holding an object, check if placeable
-        {
-            if (script_grab_zone.Place(ref_held_object)) // Returns true if successfully placed
+        {;
+           RaycastHit2D hit = Physics2D.CircleCast(transform.position, 8f, Vector2.zero,10f,PlantManager.Instance.PlantPlotLayerMask);
+           if (hit.collider != null)
+           {
+               PlantingPlot plot = hit.collider.GetComponent<PlantingPlot>();
+               if (script_grab_zone.Place(ref_held_object, plot))
+               {
+                   Debug.Log("Placing at:: "+hit.transform.name);
+                   ref_held_object = null;
+               }
+           }else if (script_grab_zone.Place(ref_held_object)) // Returns true if successfully placed
             {
                 ref_held_object = null;
             }

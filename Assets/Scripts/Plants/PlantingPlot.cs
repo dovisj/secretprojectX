@@ -1,18 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlantingPlot : MonoBehaviour
+namespace Plants
 {
-    // Start is called before the first frame update
-    void Start()
+    public class PlantingPlot : MonoBehaviour
     {
-        
-    }
+        private bool isTaken;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void PlaceOn()
+        {
+            
+        }
     }
 }

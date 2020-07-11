@@ -10,6 +10,8 @@ namespace Plants
     {
         [SerializeField]
         private PlantData _plantData;
+
+        private SpriteRenderer mainSpriteRenderer;
         [SerializeField] private float brancSizeVariations = 0.2f;
         [SerializeField] private float branchPlacementRadius = 1f;
         private string plantName;
@@ -75,7 +77,10 @@ namespace Plants
         void Awake()
         {
             SetData(_plantData);
+            mainSpriteRenderer = GetComponent<SpriteRenderer>();
+            mainSpriteRenderer.sprite = PlantManager.Instance.GetRandomSeedBag();
             branchColor = PlantManager.Instance.GetRandomBranchColor();
+            mainSpriteRenderer.color = branchColor;
             _plantPlacedDelegate += StartGrowingPlant;
         }
 
@@ -126,6 +131,7 @@ namespace Plants
                 GameObject stem = Instantiate(PlantManager.Instance.GetRandomStem(), transform.position, Quaternion.identity, transform);
                 Vector3 endSize = stem.transform.localScale;
                 StartCoroutine(AnimateGrowth(stem, endSize));
+                mainSpriteRenderer.enabled = false;
             }
             else if(CurrentGrowthStage > 1)
             {

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Plants;
 using UnityEngine;
 
 public class Behavior_Grab_Zone : MonoBehaviour
@@ -15,7 +16,7 @@ public class Behavior_Grab_Zone : MonoBehaviour
     private float move_angle = 0f;
 
     public GameObject GetGrabObj() {return obj_in_zone;}
-
+    
     public bool Place(GameObject ref_held_object)
     {
         if (obj_in_zone == null) // Nothing in way, can place
@@ -25,6 +26,18 @@ public class Behavior_Grab_Zone : MonoBehaviour
         }
         return false;
     }
+    
+    public bool Place(GameObject ref_held_object, PlantingPlot plot)
+    {
+        if (obj_in_zone == null) // Nothing in way, can place
+        {
+            ref_held_object.transform.position = plot.transform.position;
+            ref_held_object.transform.parent = plot.transform;
+            return true;
+        }
+        return false;
+    }
+
 
     private void Start()
     {

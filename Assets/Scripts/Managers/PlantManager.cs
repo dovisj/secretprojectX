@@ -8,6 +8,8 @@ namespace Managers
 {
     public class PlantManager : MonoBehaviour
     {
+        public LayerMask PlantPlotLayerMask;
+        public Sprite[] seedBags;
         public GameObject[] branches;
         public GameObject[] stems;
         public GameObject[] extras;
@@ -53,6 +55,11 @@ namespace Managers
         {
             return plantTypes[Random.Range(0, plantTypes.Length)];
         }
+        public Sprite GetRandomSeedBag()
+        {
+            return seedBags[Random.Range(0, seedBags.Length)];
+        }
+
         public GameObject GetRandomStem()
         {
             return stems[Random.Range(0, stems.Length)];
