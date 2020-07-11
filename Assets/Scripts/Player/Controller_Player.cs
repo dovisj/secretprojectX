@@ -19,6 +19,7 @@ public class Controller_Player : MonoBehaviour
     private SpriteRenderer ref_sprite_renderer = null;
     private GameObject ref_held_object = null;
 
+    private string tag_held_original = ""; // This is to ensure the player doesn't treat the held object
     private float input_h_axis = 0f;
     private float input_v_axis = 0f;
     private float last_control_change_time = 0f;
@@ -35,12 +36,14 @@ public class Controller_Player : MonoBehaviour
             ref_held_object = script_grab_zone.GetGrabObj();
             if (ref_held_object != null)
             {
+                tag_held_original = ref_held_object.tag;
+                ref_held_object.tag = "Held";
                 ref_held_object.transform.parent = transform.parent;
             }
-          
         }
         else // Already holding an object, check if placeable
-        {;
+        {
+            /*
            RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, 8f, Vector2.zero,10f,PlantManager.Instance.PlantPlotLayerMask);
            foreach (RaycastHit2D hit in hits)
            {
@@ -62,7 +65,12 @@ public class Controller_Player : MonoBehaviour
                    break;
                }
            }
-       
+           */
+            if (script_grab_zone.Place(ref_held_object)) // Returns true if successfully placed
+            {
+                ref_held_object.tag = tag_held_original;
+                ref_held_object = null;
+            }
         }
     }
 
@@ -99,6 +107,11 @@ public class Controller_Player : MonoBehaviour
             {
                 ref_sprite_renderer.color = Color.white;
             }
+        }
+
+        if (ai_control)
+        {
+            return;
         }
 
         // Movement input

@@ -9,6 +9,8 @@ public class Behavior_Grab_Zone : MonoBehaviour
 
     [SerializeField] private float offset_distance = 0f;
     [SerializeField] private float start_move_angle_deg = 0f;
+    [SerializeField] private float snap_size = 1f;
+    [SerializeField] private float snap_offset = 0f;
 
     private Vector2 starting_loc;
     private GameObject obj_in_zone = null;
@@ -27,6 +29,7 @@ public class Behavior_Grab_Zone : MonoBehaviour
         return false;
     }
     
+    /* Plot now takes care of item placed in it
     public bool Place(GameObject ref_held_object, PlantingPlot plot)
     {
         if (obj_in_zone == null) // Nothing in way, can place
@@ -38,7 +41,7 @@ public class Behavior_Grab_Zone : MonoBehaviour
         }
         return false;
     }
-
+    */
 
     private void Start()
     {
@@ -58,6 +61,8 @@ public class Behavior_Grab_Zone : MonoBehaviour
 
         // Move local position of grab zone by offset and move angle
         transform.localPosition = starting_loc + (new Vector2(Mathf.Cos(move_angle), Mathf.Sin(move_angle)) * offset_distance);
+        // Snap to grid
+        transform.position = new Vector2(Snap(transform.position.x), Snap(transform.position.y));
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -71,5 +76,10 @@ public class Behavior_Grab_Zone : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         obj_in_zone = null;
+    }
+
+    private float Snap(float x)
+    {
+        return Mathf.Floor(x / snap_size) * snap_size + snap_offset;
     }
 }
