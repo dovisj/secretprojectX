@@ -28,7 +28,7 @@ public class Controller_Player : MonoBehaviour
     public float GetSpeed() { return move_speed;}
     public bool GetAIControl() { return ai_control; }
 
-    public void ProcessHold()
+    public void ProcessInteract()
     {
         if (ref_held_object == null) // Currently not holding an object
         {
@@ -119,9 +119,9 @@ public class Controller_Player : MonoBehaviour
         input_v_axis = Input.GetAxisRaw("Vertical");
 
         // Grab input
-        if (Input.GetButtonDown("Grab"))
+        if (Input.GetButtonDown("Interact"))
         {
-            ProcessHold();
+            ProcessInteract();
         }
     }
 

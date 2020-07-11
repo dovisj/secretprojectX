@@ -7,6 +7,7 @@ public class Behavior_Grab_Zone : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D ref_parent_rbody = null;
 
+    [SerializeField] private string[] tag_holdables;
     [SerializeField] private float offset_distance = 0f;
     [SerializeField] private float start_move_angle_deg = 0f;
     [SerializeField] private float snap_size = 1f;
@@ -47,6 +48,7 @@ public class Behavior_Grab_Zone : MonoBehaviour
     {
         starting_loc = transform.localPosition;
         move_angle = Mathf.Deg2Rad * start_move_angle_deg;
+        Move();
     }
 
     private void Update()
@@ -59,15 +61,22 @@ public class Behavior_Grab_Zone : MonoBehaviour
             move_angle = Mathf.Atan2(vel.y, vel.x); // Radians
         }
 
-        // Move local position of grab zone by offset and move angle
-        transform.localPosition = starting_loc + (new Vector2(Mathf.Cos(move_angle), Mathf.Sin(move_angle)) * offset_distance);
-        // Snap to grid
-        transform.position = new Vector2(Snap(transform.position.x), Snap(transform.position.y));
+        Move();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Holdable")
+        bool can_hold = false;
+
+        foreach (string str in tag_holdables)
+        {
+            if (collision.tag == str)
+            {
+                can_hold = true;
+            }
+        }
+
+        if (can_hold)
         {
             obj_in_zone = collision.gameObject;
         }
@@ -81,5 +90,13 @@ public class Behavior_Grab_Zone : MonoBehaviour
     private float Snap(float x)
     {
         return Mathf.Floor(x / snap_size) * snap_size + snap_offset;
+    }
+
+    private void Move()
+    {
+        // Move local position of grab zone by offset and move angle
+        transform.localPosition = starting_loc + (new Vector2(Mathf.Cos(move_angle), Mathf.Sin(move_angle)) * offset_distance);
+        // Snap to grid
+        transform.position = new Vector2(Snap(transform.position.x), Snap(transform.position.y));
     }
 }
