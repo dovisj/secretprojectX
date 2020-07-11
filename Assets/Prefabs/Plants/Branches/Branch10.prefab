@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1298881086747246338}
   - component: {fileID: 2518230450888522173}
   m_Layer: 0
-  m_Name: Branch5
+  m_Name: Branch10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,13 +70,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 8815658628262995379, guid: 0523863956825e24f8b56c4fae17e150,
+  m_Sprite: {fileID: 5043356952634083148, guid: a423e8a25bf972e4298ef89efe691a6c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.74, y: 2.06}
+  m_Size: {x: 4.07, y: 1.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

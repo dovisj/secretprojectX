@@ -71,8 +71,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f815989b7f625fa4eb5f0a7065c9018f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantData: {fileID: 11400000, guid: 38778dbfc6f810042b5126a5c13f578d, type: 2}
-  sizeVariations: 0
+  _plantData: {fileID: 11400000, guid: 38778dbfc6f810042b5126a5c13f578d, type: 2}
+  brancSizeVariations: 1
   branchPlacementRadius: 3
   branchAnimCurve:
     serializedVersion: 2

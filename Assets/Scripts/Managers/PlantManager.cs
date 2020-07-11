@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using Plants;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Managers
 {
@@ -7,6 +11,11 @@ namespace Managers
         public GameObject[] branches;
         public GameObject[] stems;
         public GameObject[] extras;
+        [SerializeField]
+        private PlantData[] plantTypes;
+        public Plant plantPrefab;
+        public List<Color32> BranchColorPallete { get; private set; }
+        
         protected static PlantManager instance;
         public static PlantManager Instance
         {
@@ -25,6 +34,25 @@ namespace Managers
             }
         }
 
+        private void Awake()
+        {
+            BranchColorPallete = new List<Color32>
+            {
+                new Color32(253, 197, 245,255),
+                new Color32(179, 136, 235,255),
+                new Color32(114, 221, 247,255),
+                new Color32(243, 227, 124,255),
+                new Color32(170, 250, 200,255),
+                new Color32(255, 0, 0,255),
+                new Color32(0, 0, 255,255),
+                new Color32(0,255, 0,255)
+            };
+        }
+
+        public PlantData GetRandomPlantType()
+        {
+            return plantTypes[Random.Range(0, plantTypes.Length)];
+        }
         public GameObject GetRandomStem()
         {
             return stems[Random.Range(0, stems.Length)];
@@ -38,6 +66,11 @@ namespace Managers
         public GameObject GetRandomExtra()
         {
             return extras[Random.Range(0, extras.Length)];
+        }
+        
+        public Color32 GetRandomBranchColor()
+        {
+            return BranchColorPallete[Random.Range(0, BranchColorPallete.Count)];
         }
     }
 }
