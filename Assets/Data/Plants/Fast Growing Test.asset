@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Fast Growing Test
   m_EditorClassIdentifier: 
   plantName: Xuzerof Leaf
+  description: This is an awesome plant
   price: 10
   mutationEffects: []
   spawnChance: 1
@@ -20,6 +21,3 @@ MonoBehaviour:
   waterNeeds: 0
   fertilizerNeeds: 0
   maxGrowthStages: 5
-  stem: {fileID: 853707217250424361, guid: f24a033b7cc1b6f40bc23637154c60ed, type: 3}
-  branches:
-  - {fileID: 853707217250424361, guid: f24a033b7cc1b6f40bc23637154c60ed, type: 3}

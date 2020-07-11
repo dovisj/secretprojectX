@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Managers;
 using Plants;
 using Store;
 using UnityEngine;
@@ -43,7 +44,7 @@ namespace UIElements
             RemoveStoreItem(guid);
         }
     
-        private void RemoveStoreItem(Guid guid)
+        public void RemoveStoreItem(Guid guid)
         {
             GameObject listButton;
             if (buttonList.TryGetValue(guid,out listButton))

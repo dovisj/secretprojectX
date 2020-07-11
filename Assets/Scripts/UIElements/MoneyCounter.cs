@@ -1,5 +1,6 @@
 ﻿using System;
 using Managers;
+using Store;
 using TMPro;
 using UnityEngine;
 
@@ -13,11 +14,10 @@ namespace UIElements
         {
             moneyText = GetComponent<TextMeshProUGUI>();
             moneyText.SetText(StoreManager.Instance.AvailableCurrency.ToString());
-            EventManager.StartListening("ITEM_BOUGHT", UpdateText);
-            EventManager.StartListening("ITEM_SOLD", UpdateText);
+            StoreManager.Instance.onItemBought += UpdateText;
         }
 
-        private void UpdateText()
+        private void UpdateText(Guid guid, StoreItem storeItem)
         {
             moneyText.text = StoreManager.Instance.AvailableCurrency.ToString();
         }

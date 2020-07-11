@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using Misc;
 using Plants;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -8,6 +10,7 @@ namespace Managers
 {
     public class PlantManager : MonoBehaviour
     {
+        public Dictionary<string, Mutation> knownMutations;
         public LayerMask PlantPlotLayerMask;
         public Sprite[] seedBags;
         public GameObject[] branches;
@@ -15,6 +18,8 @@ namespace Managers
         public GameObject[] extras;
         [SerializeField]
         private PlantData[] plantTypes;
+        [SerializeField]
+        private List<Mutation> mutations;
         public Plant plantPrefab;
         public List<Color32> BranchColorPallete { get; private set; }
         
@@ -38,6 +43,10 @@ namespace Managers
 
         private void Awake()
         {
+            mutations = new List<Mutation>();
+            mutations.Add(new MutationEffectResize());
+            mutations.Add(new MutationEffectRainbow());
+            knownMutations = new Dictionary<string, Mutation>();
             BranchColorPallete = new List<Color32>
             {
                 new Color32(253, 197, 245,255),
@@ -49,6 +58,10 @@ namespace Managers
                 new Color32(0, 0, 255,255),
                 new Color32(0,255, 0,255)
             };
+            foreach (PlantData plantType in plantTypes)
+            {
+                plantType.Randomize();
+            }
         }
 
         public PlantData GetRandomPlantType()
@@ -79,5 +92,27 @@ namespace Managers
         {
             return BranchColorPallete[Random.Range(0, BranchColorPallete.Count)];
         }
+
+        public List<Mutation> GetRandomMutations(int count)
+        {
+            if (count > mutations.Count)
+            {
+                return new List<Mutation>();
+            }
+            System.Random rnd=new System.Random();
+            mutations = mutations.OrderBy(x => rnd.Next()).ToList();
+            List<Mutation> toReturn = new List<Mutation>();
+            for (int i = 0; (i < mutations.Count && i < count); i++)
+            {
+                toReturn.Add(mutations[i]);
+            }
+            return toReturn;
+        }
+
+        public Mutation GetRandomMutation()
+        {
+            return mutations[Random.Range(0, mutations.Count)];
+        }
+        
     }
 }

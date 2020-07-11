@@ -16,9 +16,10 @@ namespace Plants
         private SpriteRenderer mainSpriteRenderer;
         [SerializeField] private float brancSizeVariations = 0.2f;
         [SerializeField] private float branchPlacementRadius = 1f;
+        [SerializeField] private int maxMutationCount = 3;
         private string plantName;
         private int price;
-        private MutationEffect[] mutationEffects;
+        private List<Mutation> mutationEffects;
         private float spawnChance;
         private float delayBetweenStages;
         private int waterNeeds;
@@ -75,7 +76,7 @@ namespace Plants
                 SetData(_plantData);
             }
         }
-
+        
         void Awake()
         {
             SetData(_plantData);
@@ -84,13 +85,13 @@ namespace Plants
             branchColor = PlantManager.Instance.GetRandomBranchColor();
             mainSpriteRenderer.color = branchColor;
             _plantPlacedDelegate += StartGrowingPlant;
+         
         }
-
+        
         private void SetData(PlantData data)
         {
             plantName = data.plantName;
             price = data.price;
-            MutationEffect[] mutationEffects = data.mutationEffects;
             spawnChance = data.spawnChance;
             delayBetweenStages = data.delayBetweenStages;
             waterNeeds = data.waterNeeds;
