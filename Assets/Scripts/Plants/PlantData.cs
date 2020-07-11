@@ -7,6 +7,7 @@ namespace Plants
     public class PlantData : ScriptableObject
     {
         public string plantName = "Xuzerof Leaf";
+        public string description = "This is an awesome plant";
         public int price = 10;
         public MutationEffect[] mutationEffects;
         public float spawnChance = 1;

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Managers;
 using Plants;
+using Store;
 using UnityEngine;
 
 public class StoreManager : MonoBehaviour
@@ -10,15 +11,18 @@ public class StoreManager : MonoBehaviour
     public int AvailableCurrency { get; private set; } = 1000;
 
     [SerializeField]
-    private Dictionary<Guid,PlantData> currentStock;
+    private Dictionary<Guid,StoreItem> currentStock;
     [SerializeField]
     private int maxStock = 5;
 
     private float stockChangeTimer;
     protected static StoreManager instance;
 
-    public delegate void OnStockAdded(Guid guid, PlantData data);
+    public delegate void OnStockAdded(Guid guid, StoreItem data);
     public OnStockAdded onStockAdded;
+    
+    public delegate void OnItemBought(Guid guid, StoreItem storeItem);
+    public OnItemBought onItemBought;
 
     public static StoreManager Instance
     {
@@ -39,7 +43,7 @@ public class StoreManager : MonoBehaviour
 
     private void Awake()
     {
-        currentStock = new Dictionary<Guid, PlantData>();
+        currentStock = new Dictionary<Guid, StoreItem>();
     }
 
     private void Start()
@@ -52,36 +56,37 @@ public class StoreManager : MonoBehaviour
         for (int i = 0; i < maxStock; i++)
         {
             Guid newGuid = Guid.NewGuid();
-            PlantData data = PlantManager.Instance.GetRandomPlantType();
-            currentStock.Add(newGuid,data);
-            onStockAdded.Invoke(newGuid,data);
+            StoreItem storeItem = GetRandomStoreItem();
+            currentStock.Add(newGuid,storeItem);
+            onStockAdded.Invoke(newGuid,storeItem);
         }
      
     }
 
     public void Buy(Guid guid)
     {
-        PlantData plantData;
-        if (currentStock.TryGetValue(guid, out plantData))
+        StoreItem storeItem;
+        if (!currentStock.TryGetValue(guid, out storeItem)) return;
+        if (AvailableCurrency - storeItem.price < 0)
         {
-            if (AvailableCurrency - plantData.price < 0)
-            {
-                Debug.Log("STORE_NOT_ENOUGH_CASH");
-                EventManager.TriggerEvent("STORE_NOT_ENOUGH_CASH");
-            }
-            else
-            {
-                AvailableCurrency -= plantData.price;
-                Debug.Log("Bought:: "+plantData.plantName+" for:: "+plantData.price);
-                Plant plant = Instantiate(PlantManager.Instance.plantPrefab);
-                plant.PlantData = plantData;
-                EventManager.TriggerEvent("ITEM_BOUGHT");
-            }
+            Debug.Log("STORE_NOT_ENOUGH_CASH");
+            EventManager.TriggerEvent("STORE_NOT_ENOUGH_CASH");
+        }
+        else
+        {
+            AvailableCurrency -= storeItem.price;
+            Debug.Log("Bought:: "+storeItem.itemName+" for:: "+storeItem.price);
+            onItemBought?.Invoke(guid,storeItem);
         }
     }
 
     void Sell(Plant plant)
     {
         
+    }
+
+    private StoreItem GetRandomStoreItem()
+    {
+        return new StoreItem(PlantManager.Instance.GetRandomPlantType());
     }
 }

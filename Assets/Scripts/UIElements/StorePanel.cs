@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Plants;
+using Store;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +10,7 @@ namespace UIElements
     public class StorePanel : MonoBehaviour
     {
         [SerializeField]
-        private GameObject buttonPrefab;
+        private StoreButton buttonPrefab;
         [SerializeField]
         private GameObject buttonHolder;
 
@@ -19,12 +20,15 @@ namespace UIElements
             buttonList = new Dictionary<Guid, GameObject>();
         }
 
-        public void AddStoreItem(Guid guid,PlantData data)
+        public void AddStoreItem(Guid guid,StoreItem data)
         {
             if (!buttonList.ContainsKey(guid))
             {
-                GameObject buttonObject = Instantiate(buttonPrefab, buttonHolder.transform);
-                Button button = buttonObject.GetComponent<Button>();
+                StoreButton storeButton = Instantiate(buttonPrefab, buttonHolder.transform);
+                storeButton.description = data.description;
+                storeButton.nameText = data.itemName;
+                storeButton.priceText = data.price.ToString();
+                Button button = storeButton.GetComponent<Button>();
                 button.onClick.AddListener(delegate { BuyAction(guid); });
                 buttonList.Add(guid,button.gameObject);
             }

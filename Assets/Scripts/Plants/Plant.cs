@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using Managers;
 using Misc;
+using Store;
 using UnityEngine;
 
 namespace Plants
 {
+    [RequireComponent(typeof(StoreItem))]
     public class Plant : MonoBehaviour
     {
         [SerializeField]
