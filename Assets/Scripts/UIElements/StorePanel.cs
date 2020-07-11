@@ -36,6 +36,9 @@ namespace UIElements
 
         private void BuyAction(Guid guid)
         {
+            UIManager.Instance.storeDescription.priceText.text = "";
+            UIManager.Instance.storeDescription.descriptionText.text = "";
+            UIManager.Instance.storeDescription.nameText.text = "";
             StoreManager.Instance.Buy(guid);
             RemoveStoreItem(guid);
         }
