@@ -33,6 +33,7 @@ public class Behavior_Grab_Zone : MonoBehaviour
         {
             ref_held_object.transform.position = plot.transform.position;
             ref_held_object.transform.parent = plot.transform;
+            plot.PlaceOn(ref_held_object);
             return true;
         }
         return false;

@@ -33,22 +33,36 @@ public class Controller_Player : MonoBehaviour
         {
             // Check if there's an object 
             ref_held_object = script_grab_zone.GetGrabObj();
+            if (ref_held_object != null)
+            {
+                ref_held_object.transform.parent = transform.parent;
+            }
+          
         }
         else // Already holding an object, check if placeable
         {;
-           RaycastHit2D hit = Physics2D.CircleCast(transform.position, 8f, Vector2.zero,10f,PlantManager.Instance.PlantPlotLayerMask);
-           if (hit.collider != null)
+           RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, 8f, Vector2.zero,10f,PlantManager.Instance.PlantPlotLayerMask);
+           foreach (RaycastHit2D hit in hits)
            {
-               PlantingPlot plot = hit.collider.GetComponent<PlantingPlot>();
-               if (script_grab_zone.Place(ref_held_object, plot))
+               if (hit.collider != null)
                {
-                   Debug.Log("Placing at:: "+hit.transform.name);
+                   PlantingPlot plot = hit.collider.GetComponent<PlantingPlot>();
+                   if (plot.isTaken)
+                   {
+                       //Process Wattering, and things.
+                   };
+                   if (script_grab_zone.Place(ref_held_object, plot))
+                   {
+                       ref_held_object = null;
+                       break;
+                   }
+               }else if (script_grab_zone.Place(ref_held_object)) // Returns true if successfully placed
+               {
                    ref_held_object = null;
+                   break;
                }
-           }else if (script_grab_zone.Place(ref_held_object)) // Returns true if successfully placed
-            {
-                ref_held_object = null;
-            }
+           }
+       
         }
     }
 
