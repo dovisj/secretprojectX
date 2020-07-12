@@ -19,7 +19,7 @@ namespace Plants
 
         public override void Interact(ref GameObject ref_held_obj, ref string original_tag, ref LayerMask original_layer)
         {
-            if (ref_held_obj == null) // Not holding anything
+            if (ref_held_obj == null) // Interacting entity not holding anything
             {
                 if (ref_placed_plant)
                 {
@@ -28,6 +28,7 @@ namespace Plants
                     ref_placed_plant.GetComponent<Rigidbody2D>().velocity = (new Vector2(Mathf.Cos(random_angle), Mathf.Sin(random_angle))) * ejection_velocity;
 
                     // Unroot the plant
+                    ref_placed_plant.tag = "Plant";
                     ref_placed_plant.layer = LayerMask.NameToLayer("Seeds");
                     ref_placed_plant = null;
                     script_plant = null;
@@ -38,15 +39,15 @@ namespace Plants
                 // Check if plant
                 if (original_tag == "Plant")
                 {
-                    if (ref_placed_plant == null)
+                    if (ref_placed_plant == null) // No plants are currently on the plot
                     {
                         // Assign held plant to plot
                         ref_placed_plant = ref_held_obj.gameObject;
+                        ref_placed_plant.tag = "Planted";
                         ref_placed_plant.layer = LayerMask.NameToLayer("Planted"); // Prevents selection cursor from targetting this over Plot
                         script_plant = ref_placed_plant.GetComponent<Plant>();
 
                         // Free the previously held plant
-                        ref_held_obj.tag = original_tag;
                         ref_held_obj = null;
                     }
                 }

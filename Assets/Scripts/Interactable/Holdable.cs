@@ -9,11 +9,12 @@ public class Holdable : Interactable
         // If the entity interacting with this plant is not holding anything, make it hold this plant
         if (ref_held_obj == null) // Not already holding an object
         {
-            original_tag = gameObject.tag;
-            original_layer = gameObject.layer;
-            gameObject.tag = "Held";
-            gameObject.layer = LayerMask.NameToLayer("Held");
-            ref_held_obj = this.gameObject;
+            GameObject ref_game_obj = this.gameObject;
+            original_tag = ref_game_obj.tag;
+            original_layer = ref_game_obj.layer;
+            ref_game_obj.tag = "Held";
+            ref_game_obj.layer = LayerMask.NameToLayer("Held");
+            ref_held_obj = ref_game_obj;
         }
     }
 }
