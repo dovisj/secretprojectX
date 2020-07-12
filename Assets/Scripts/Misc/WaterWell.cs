@@ -14,6 +14,7 @@ public class WaterWell : Interactable
                WateringCan wateringCan = ref_held_obj.GetComponent<WateringCan>();
                wateringCan.WaterAmount = 100f;
                wateringCan.RunParticles();
+                SoundManager.Instance.PlayWaterCanFill();
             }
         }
     }

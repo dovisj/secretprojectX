@@ -140,6 +140,7 @@ namespace Managers
         
             onItemSold?.Invoke(plant);
             Destroy(plant.gameObject);
+            SoundManager.Instance.PlaySellItem();
         }
 
         private void RemoveItem(Guid guid)
@@ -148,7 +149,6 @@ namespace Managers
             {
                 currentStock.Remove(guid);
             }
-            
         }
 
         private StoreItem GetRandomStoreItem()

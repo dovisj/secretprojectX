@@ -16,6 +16,10 @@ public class SoundManager : MonoBehaviour
     private AudioClip chillMusic;
     [SerializeField]
     private AudioClip controlMusic;
+    [SerializeField]
+    private AudioClip sellSound;
+    [SerializeField]
+    private AudioClip fillWaterCan;
 
     [SerializeField] private AudioClip itemGrabSound;
     protected static SoundManager instance;
@@ -74,5 +78,15 @@ public class SoundManager : MonoBehaviour
     public void PlayPourWater()
     {
         _audioSource.PlayOneShot(pourWater);
+    }
+
+    public void PlaySellItem()
+    {
+        _audioSource.PlayOneShot(sellSound);
+    }
+
+    public void PlayWaterCanFill()
+    {
+        _audioSource.PlayOneShot(fillWaterCan);
     }
 }

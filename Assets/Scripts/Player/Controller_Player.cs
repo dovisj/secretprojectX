@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using Managers;
 using Plants;
 using UnityEngine;
+using UnityEngine.Experimental.U2D.Animation;
 
 public class Controller_Player : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer ref_sprite_renderer = null;
     [SerializeField] private Behavior_Grab_Zone script_grab_zone = null;
     [SerializeField] private Transform ref_hold_location = null;
     [SerializeField] private Animator ref_player_animator = null;
+    [SerializeField] private SpriteRenderer ref_sprite_renderer = null;
+    //[SerializeField] private SpriteResolver ref_sprite_resolver = null;
 
     [SerializeField] private string[] tag_interactable;
     //[SerializeField] private string[] tag_holdables; // Changed holdables to be a type of interactables
@@ -136,7 +138,25 @@ public class Controller_Player : MonoBehaviour
 
         if (ai_control)
         {
+            //ref_sprite_resolver.SetCategoryAndLabel("Body", "body_ai");
+            //ref_sprite_resolver.ResolveSpriteToSpriteRenderer();
+
             return;
+        }
+        else
+        {
+            /*
+            if (ref_held_object == null)
+            {
+                ref_sprite_resolver.SetCategoryAndLabel("Body", "body_normal");
+                ref_sprite_resolver.ResolveSpriteToSpriteRenderer();
+            }
+            else
+            {
+                ref_sprite_resolver.SetCategoryAndLabel("Body", "body_heavy");
+                ref_sprite_resolver.ResolveSpriteToSpriteRenderer();
+            }
+            */
         }
 
         // Movement input
