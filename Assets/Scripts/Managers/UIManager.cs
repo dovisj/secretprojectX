@@ -77,4 +77,9 @@ public class UIManager : MonoBehaviour
         yield return Timing.WaitForSeconds(3);
         messageCenter.SetMessage("");
     }
+
+    public void ToggleTutorialMessages()
+    {
+        
+    }
 }
