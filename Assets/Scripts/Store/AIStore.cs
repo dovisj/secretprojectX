@@ -13,7 +13,10 @@ public class AIStore : Interactable
 
     public override void InteractEvil(ref GameObject ref_held_obj, ref string original_tag, ref LayerMask original_layer)
     {
-        StoreManager.Instance.BuyRandom();
+        if (StoreManager.Instance.currentStock.Count > 0)
+        {
+            StoreManager.Instance.BuyRandom();
+        }
     }
 
     public override void StopInteracting()

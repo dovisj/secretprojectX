@@ -13,7 +13,7 @@ namespace Managers
         public int AvailableCurrency { get; private set; } = 1000;
 
         [SerializeField]
-        private Dictionary<Guid,StoreItem> currentStock;
+        public Dictionary<Guid,StoreItem> currentStock;
         [SerializeField]
         private int maxStock = 4;
         [SerializeField]
@@ -100,18 +100,10 @@ namespace Managers
         {
             StoreItem storeItem;
             if (!currentStock.TryGetValue(guid, out storeItem)) return;
-            if (AvailableCurrency - storeItem.buyPrice < 0)
-            {
-                Debug.Log("STORE_NOT_ENOUGH_CASH");
-                EventManager.TriggerEvent("STORE_NOT_ENOUGH_CASH");
-            }
-            else
-            {
-                AvailableCurrency -= storeItem.buyPrice;
-                Debug.Log("Bought:: "+storeItem.itemName+" for:: "+storeItem.buyPrice);
-                SoundManager.Instance.PlayRandomWoosh();
-                onItemBought?.Invoke(guid,storeItem);
-            }
+            AvailableCurrency -= storeItem.buyPrice;
+            Debug.Log("Bought:: "+storeItem.itemName+" for:: "+storeItem.buyPrice);
+            SoundManager.Instance.PlayRandomWoosh();
+            onItemBought?.Invoke(guid,storeItem);
         }
         
         public void BuyRandom()
