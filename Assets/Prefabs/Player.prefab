@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 5934701562269780561}
   - component: {fileID: 5934701562269780566}
   - component: {fileID: 5934701562269780567}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -518,9 +518,10 @@ MonoBehaviour:
   script_grab_zone: {fileID: 5934701562313672526}
   ref_hold_location: {fileID: 5934701563658201180}
   ref_player_animator: {fileID: 1158345275167916578}
+  tag_interactable:
+  - Plot
   tag_holdables:
   - Plant
-  tag_interactable: []
   move_speed: 250
   time_human_control_seconds: 5
   time_ai_control_seconds: 0
@@ -597,7 +598,7 @@ GameObject:
   - component: {fileID: 5934701562313672526}
   - component: {fileID: 5934701562313672520}
   - component: {fileID: 5934701562313672521}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Grab_zone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -720,7 +721,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5934701563658201180}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Hold_space
   m_TagString: Untagged
   m_Icon: {fileID: 0}

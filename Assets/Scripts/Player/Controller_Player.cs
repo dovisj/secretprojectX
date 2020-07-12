@@ -10,8 +10,8 @@ public class Controller_Player : MonoBehaviour
     [SerializeField] private Transform ref_hold_location = null;
     [SerializeField] private Animator ref_player_animator = null;
 
-    [SerializeField] private string[] tag_holdables;
     [SerializeField] private string[] tag_interactable;
+    [SerializeField] private string[] tag_holdables;
     [SerializeField] private float move_speed = 0f;
     [SerializeField] private float time_human_control_seconds = 0f;
     [SerializeField] private float time_ai_control_seconds = 0f;
@@ -31,6 +31,10 @@ public class Controller_Player : MonoBehaviour
 
     public float GetSpeed() { return move_speed;}
     public bool GetAIControl() { return ai_control; }
+    public ref GameObject GetRefHeld() {return ref ref_held_object;}
+    public string GetHeldOGTag() { return tag_held_original; }
+    public LayerMask GetHeldOGLayer() { return layer_held_original; }
+
 
     public void ProcessInteract()
     {
@@ -96,6 +100,7 @@ public class Controller_Player : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(ref_held_object);
         // Check if it's time to change control modes
         float elapsed_time = Time.time - last_control_change_time;
         if (elapsed_time > (ai_control ? time_ai_control_seconds : time_human_control_seconds) && (ai_control ? time_human_control_seconds : time_ai_control_seconds) > 0)
@@ -159,7 +164,20 @@ public class Controller_Player : MonoBehaviour
 
     private void Interactable(GameObject ref_obj)
     {
+        bool can_interact = false;
 
+        foreach (string str in tag_interactable)
+        {
+            if (ref_obj.tag == str)
+            {
+                can_interact = true;
+            }
+        }
+
+        if (can_interact)
+        {
+            ref_obj.GetComponent<Interactable>().Interact(ref ref_held_object, tag_held_original, layer_held_original);
+        }
     }
 
     private void Holdable(GameObject ref_obj)

@@ -4,10 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Interactable
-  - Holdable
   - Held
   - Plant
+  - Plot
   layers:
   - Default
   - TransparentFX
@@ -23,7 +22,7 @@ TagManager:
   - Selection
   - Player
   - Held
-  - 
+  - Planted
   - 
   - 
   - 

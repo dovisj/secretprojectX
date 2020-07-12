@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4086319776169533598}
   m_Layer: 9
   m_Name: Plot
-  m_TagString: Interactable
+  m_TagString: Plot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 247da5e4442294a449f3cc9bda2398ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ejection_velocity: 5
 --- !u!61 &4086319776169533598
 BoxCollider2D:
   m_ObjectHideFlags: 0
