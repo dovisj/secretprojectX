@@ -109,7 +109,15 @@ namespace Plants
             SetData(_plantData);
             mainSpriteRenderer = GetComponent<SpriteRenderer>();
             mainSpriteRenderer.sprite = PlantManager.Instance.GetRandomSeedBag();
-            branchColor = PlantManager.Instance.GetRandomBranchColor();
+            if (Random.Range(0, 100) > 25)
+            {
+                branchColor = new Color32(255, 255, 255, 255);
+            }
+            else
+            {
+                branchColor = PlantManager.Instance.GetRandomBranchColor();
+            }
+          
             mainSpriteRenderer.color = branchColor;
             _plantPlacedDelegate += StartGrowingPlant;
          

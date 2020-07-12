@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Plant3
   m_EditorClassIdentifier: 
   plantName: Xuzerof Leaf
-  description: "\n - unknown effect"
+  description: 
   price: 100
   spawnChance: 1
   delayBetweenStages: 1
-  waterNeeds: 100
+  waterNeeds: 500
   fertilizerNeeds: 0
   maxGrowthStages: 3
   plantSprite: {fileID: 11400000, guid: 672daca078760c84997740e6da3960aa, type: 2}

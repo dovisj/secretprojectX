@@ -5,7 +5,7 @@ namespace Misc
 {
     public class WateringCan : MonoBehaviour
     {
-        public float _waterAmount = 100f;
+        public float _waterAmount = 0;
         private ParticleSystem _particleSystem;
 
         public float WaterAmount

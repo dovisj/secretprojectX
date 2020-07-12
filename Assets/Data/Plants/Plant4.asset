@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantName: Xuzerof Leaf
   description: 
-  price: 30
+  price: 100
   spawnChance: 1
   delayBetweenStages: 1
-  waterNeeds: 100
+  waterNeeds: 500
   fertilizerNeeds: 0
   maxGrowthStages: 3
   plantSprite: {fileID: 11400000, guid: dc247327fd871af498447f493d379a06, type: 2}

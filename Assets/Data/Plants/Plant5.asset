@@ -17,7 +17,7 @@ MonoBehaviour:
   price: 60
   spawnChance: 1
   delayBetweenStages: 1
-  waterNeeds: 100
+  waterNeeds: 500
   fertilizerNeeds: 0
   maxGrowthStages: 3
   plantSprite: {fileID: 11400000, guid: 5a58824a700af27478c6060d829292df, type: 2}

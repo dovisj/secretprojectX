@@ -1,0 +1,1736 @@
+fileFormatVersion: 2
+guid: b37467867d3508248ae70c0c2fcab742
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8574123362641492179
+    second: pink_ground_tiles_0
+  - first:
+      213: -3118932739542751910
+    second: pink_ground_tiles_1
+  - first:
+      213: 4259474963120121824
+    second: pink_ground_tiles_2
+  - first:
+      213: 6544626105814483133
+    second: pink_ground_tiles_3
+  - first:
+      213: 916043304553254080
+    second: pink_ground_tiles_4
+  - first:
+      213: -348966722768523055
+    second: pink_ground_tiles_5
+  - first:
+      213: -1433800299208961702
+    second: pink_ground_tiles_6
+  - first:
+      213: 6935828315611131716
+    second: pink_ground_tiles_7
+  - first:
+      213: -2280642000340414915
+    second: pink_ground_tiles_8
+  - first:
+      213: -9200890133754925566
+    second: pink_ground_tiles_9
+  - first:
+      213: -6340138169388454451
+    second: pink_ground_tiles_10
+  - first:
+      213: 3075904254522065575
+    second: pink_ground_tiles_11
+  - first:
+      213: -2737804849362575535
+    second: pink_ground_tiles_12
+  - first:
+      213: 3805539247479599527
+    second: pink_ground_tiles_13
+  - first:
+      213: 6947063497931711077
+    second: pink_ground_tiles_14
+  - first:
+      213: 3287207415436934512
+    second: pink_ground_tiles_15
+  - first:
+      213: 8943484033246838088
+    second: pink_ground_tiles_16
+  - first:
+      213: -3541770675750052426
+    second: pink_ground_tiles_17
+  - first:
+      213: 7617205843908612750
+    second: pink_ground_tiles_18
+  - first:
+      213: 7443523228211473483
+    second: pink_ground_tiles_19
+  - first:
+      213: 396156827760545212
+    second: pink_ground_tiles_20
+  - first:
+      213: -8423679398508700074
+    second: pink_ground_tiles_21
+  - first:
+      213: 8104985355688639950
+    second: pink_ground_tiles_22
+  - first:
+      213: 3772006021706727193
+    second: pink_ground_tiles_23
+  - first:
+      213: 1439811583228401644
+    second: pink_ground_tiles_24
+  - first:
+      213: -5517037263022801222
+    second: pink_ground_tiles_25
+  - first:
+      213: -7968595619729067557
+    second: pink_ground_tiles_26
+  - first:
+      213: 8188782998486829432
+    second: pink_ground_tiles_27
+  - first:
+      213: 608671935736983636
+    second: pink_ground_tiles_28
+  - first:
+      213: 858376381853920404
+    second: pink_ground_tiles_29
+  - first:
+      213: 4066597314060154619
+    second: pink_ground_tiles_30
+  - first:
+      213: 4656498833120811541
+    second: pink_ground_tiles_31
+  - first:
+      213: -7959613662387713759
+    second: pink_ground_tiles_32
+  - first:
+      213: -6223524526865778687
+    second: pink_ground_tiles_33
+  - first:
+      213: -4556752477844639806
+    second: pink_ground_tiles_34
+  - first:
+      213: 4044168104259568643
+    second: pink_ground_tiles_35
+  - first:
+      213: -2521669632374988965
+    second: pink_ground_tiles_36
+  - first:
+      213: -1152671310595898060
+    second: pink_ground_tiles_37
+  - first:
+      213: -5485881458777579788
+    second: pink_ground_tiles_38
+  - first:
+      213: 383528724493414260
+    second: pink_ground_tiles_39
+  - first:
+      213: 6100418750294282231
+    second: pink_ground_tiles_40
+  - first:
+      213: 2301056076132517251
+    second: pink_ground_tiles_41
+  - first:
+      213: -7962932470057083906
+    second: pink_ground_tiles_42
+  - first:
+      213: -3523168303201866995
+    second: pink_ground_tiles_43
+  - first:
+      213: -8078353712383779252
+    second: pink_ground_tiles_44
+  - first:
+      213: 4498593152176939422
+    second: pink_ground_tiles_45
+  - first:
+      213: 3114702558530821237
+    second: pink_ground_tiles_46
+  - first:
+      213: -1494037498228770600
+    second: pink_ground_tiles_47
+  - first:
+      213: 965064494005270274
+    second: pink_ground_tiles_48
+  - first:
+      213: -5367177805473590016
+    second: pink_ground_tiles_49
+  - first:
+      213: 8192585343348596662
+    second: pink_ground_tiles_50
+  - first:
+      213: 5782480586369431029
+    second: pink_ground_tiles_51
+  - first:
+      213: -793121197056040833
+    second: pink_ground_tiles_52
+  - first:
+      213: 2557488761292221712
+    second: pink_ground_tiles_53
+  - first:
+      213: -1134888882206574614
+    second: pink_ground_tiles_54
+  - first:
+      213: 1369404844424315817
+    second: pink_ground_tiles_55
+  - first:
+      213: 6097881658776216626
+    second: pink_ground_tiles_56
+  - first:
+      213: -3847828940736343196
+    second: pink_ground_tiles_57
+  - first:
+      213: -7552700061412816878
+    second: pink_ground_tiles_58
+  - first:
+      213: -2878059169340000871
+    second: pink_ground_tiles_59
+  - first:
+      213: 6286284287136030373
+    second: pink_ground_tiles_60
+  - first:
+      213: -532323163955339218
+    second: pink_ground_tiles_61
+  - first:
+      213: -5658389910233961641
+    second: pink_ground_tiles_62
+  - first:
+      213: 2782235574190360732
+    second: pink_ground_tiles_63
+  - first:
+      213: -802529520496709794
+    second: pink_ground_tiles_64
+  - first:
+      213: 7178098896178624314
+    second: pink_ground_tiles_65
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pink_ground_tiles_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 155
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8bf9a45c76df670800000000000000
+      internalID: 8574123362641492179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 155
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55e73db23357b4d0800000000000000
+      internalID: -3118932739542751910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_2
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 155
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e7e17a49e1bc1b30800000000000000
+      internalID: 4259474963120121824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_3
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 155
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db002d0b4ce23da50800000000000000
+      internalID: 6544626105814483133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_4
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 155
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc85c6388076bc00800000000000000
+      internalID: 916043304553254080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_5
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 138
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d033f25d98382bf0800000000000000
+      internalID: -348966722768523055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_6
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 138
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a511dc6793e1a1ce0800000000000000
+      internalID: -1433800299208961702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_7
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 138
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44fe81ffa13014060800000000000000
+      internalID: 6935828315611131716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_8
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 138
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e8fdd1f288950e0800000000000000
+      internalID: -2280642000340414915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_9
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 138
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e2428fb2fdf4080800000000000000
+      internalID: -9200890133754925566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_10
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 121
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcda4ba2ded4308a0800000000000000
+      internalID: -6340138169388454451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_11
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 121
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a286e56f9ecfaa20800000000000000
+      internalID: 3075904254522065575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_12
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 121
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15fd669befc510ad0800000000000000
+      internalID: -2737804849362575535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_13
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 121
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a134d078cdffc430800000000000000
+      internalID: 3805539247479599527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_14
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 121
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5626d4ab17de86060800000000000000
+      internalID: 6947063497931711077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_15
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 118
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07df52c5ab18e9d20800000000000000
+      internalID: 3287207415436934512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_16
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 118
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d3e08f753ad1c70800000000000000
+      internalID: 8943484033246838088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_17
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 118
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bdd504e55a19dec0800000000000000
+      internalID: -3541770675750052426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_18
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 104
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82d33b7b50c5b960800000000000000
+      internalID: 7617205843908612750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_19
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 104
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ce9e640f4bc4760800000000000000
+      internalID: 7443523228211473483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_20
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 104
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd4302398e6f7500800000000000000
+      internalID: 396156827760545212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_21
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 104
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65edc16b734191b80800000000000000
+      internalID: -8423679398508700074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_22
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 104
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd709b2d31ba7070800000000000000
+      internalID: 8104985355688639950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_23
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 101
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91fb676ed7bd85430800000000000000
+      internalID: 3772006021706727193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_24
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 101
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce752d9a10d3bf310800000000000000
+      internalID: 1439811583228401644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_25
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 101
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abebeecf6db8f63b0800000000000000
+      internalID: -5517037263022801222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_26
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 101
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1b057d08cd96190800000000000000
+      internalID: -7968595619729067557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_27
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 101
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879c09740c664a170800000000000000
+      internalID: 8188782998486829432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_28
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4503a5296ef627800800000000000000
+      internalID: 608671935736983636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_29
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49cecfb75c099eb00800000000000000
+      internalID: 858376381853920404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_30
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6fc1d16b47f6830800000000000000
+      internalID: 4066597314060154619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_31
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51adf2d74053f9040800000000000000
+      internalID: 4656498833120811541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_32
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129c800cb85c98190800000000000000
+      internalID: -7959613662387713759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_33
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108fb3d9a6991a9a0800000000000000
+      internalID: -6223524526865778687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_34
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf60bc93c923c0c0800000000000000
+      internalID: -4556752477844639806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_35
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3044b52c675cf1830800000000000000
+      internalID: 4044168104259568643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_36
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f166964da310dd0800000000000000
+      internalID: -2521669632374988965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_37
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435c525dc83e000f0800000000000000
+      internalID: -1152671310595898060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_38
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 67
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe19a1f0eb3ed3b0800000000000000
+      internalID: -5485881458777579788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_39
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 67
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47fa698c751925500800000000000000
+      internalID: 383528724493414260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_40
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 67
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff4c60388a09a450800000000000000
+      internalID: 6100418750294282231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_41
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 67
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 385022a4f4efeef10800000000000000
+      internalID: 2301056076132517251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_42
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 67
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efbd2df9b1bfd7190800000000000000
+      internalID: -7962932470057083906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_43
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 67
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0bacb348113b1fc0800000000000000
+      internalID: -3523168303201866995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_44
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 67
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e186b791ce3ef80800000000000000
+      internalID: -8078353712383779252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_45
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 67
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91e28823a63e6e30800000000000000
+      internalID: 4498593152176939422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_46
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 67
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57cda3e7975a93b20800000000000000
+      internalID: 3114702558530821237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_47
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 67
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8f5f4afcc144be0800000000000000
+      internalID: -1494037498228770600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_48
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 50
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 207b68e4b09946d00800000000000000
+      internalID: 965064494005270274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_49
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 50
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 005d262f834f385b0800000000000000
+      internalID: -5367177805473590016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_50
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 50
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf5d5ea6f8e1b170800000000000000
+      internalID: 8192585343348596662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_51
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 50
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f57427d47f7f3050800000000000000
+      internalID: 5782480586369431029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_52
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 50
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7064a139744ef4f0800000000000000
+      internalID: -793121197056040833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_53
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 50
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01d60ed6a760e7320800000000000000
+      internalID: 2557488761292221712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_54
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 50
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7798413901040f0800000000000000
+      internalID: -1134888882206574614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_55
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 50
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a34c99537a110310800000000000000
+      internalID: 1369404844424315817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_56
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 33
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234e9b98f0700a450800000000000000
+      internalID: 6097881658776216626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_57
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 33
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46351fe07f3c99ac0800000000000000
+      internalID: -3847828940736343196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_58
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 33
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2180b606f4b6f2790800000000000000
+      internalID: -7552700061412816878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_59
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 33
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995fee02f641f08d0800000000000000
+      internalID: -2878059169340000871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_60
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 33
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aedcd3c04e5d3750800000000000000
+      internalID: 6286284287136030373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_61
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20eaba17eecc98f0800000000000000
+      internalID: -532323163955339218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_62
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ba9d72b5c5971b0800000000000000
+      internalID: -5658389910233961641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_63
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c984219838c7c9620800000000000000
+      internalID: 2782235574190360732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_64
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f670137a7dcd4f0800000000000000
+      internalID: -802529520496709794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink_ground_tiles_65
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37b9553aeabd9360800000000000000
+      internalID: 7178098896178624314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7537ec3d223b61d4aaf63f600ee71efe
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

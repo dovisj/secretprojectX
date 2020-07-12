@@ -56,7 +56,8 @@ namespace Managers
                 new Color32(170, 250, 200,255),
                 new Color32(255, 0, 0,255),
                 new Color32(0, 0, 255,255),
-                new Color32(0,255, 0,255)
+                new Color32(0,255, 0,255),
+                new Color32(255,255, 255,255),
             };
             foreach (PlantData plantType in plantTypes)
             {
