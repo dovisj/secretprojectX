@@ -14,7 +14,8 @@ namespace Plants
     {
         [SerializeField]
         private PlantData _plantData;
-
+        [SerializeField]
+        private float priceChangeOverGrowth = 200;
         private ParticleSystem _particleSystem;
         private SpriteRenderer mainSpriteRenderer;
         [SerializeField] private float brancSizeVariations = 0.2f;
@@ -195,7 +196,7 @@ namespace Plants
 
         private void GoUpAStage()
         {
-            price = (int)(Price *  (1 + growthPercentage/100));
+            price = (int)(Price *  (1 + growthPercentage/priceChangeOverGrowth));
             currentGrowthStage++;
             if (currentGrowthStage != 3)
             {

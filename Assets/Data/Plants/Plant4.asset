@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04dbb008dc91b56419a2027569fc194d, type: 3}
   m_Name: Plant4
   m_EditorClassIdentifier: 
-  plantName: Xuzerof Leaf
+  plantName: Twinmouth
   description: 
-  price: 100
+  price: 250
   spawnChance: 1
   delayBetweenStages: 1
-  waterNeeds: 500
+  waterNeeds: 100
   fertilizerNeeds: 0
   maxGrowthStages: 3
   plantSprite: {fileID: 11400000, guid: dc247327fd871af498447f493d379a06, type: 2}
