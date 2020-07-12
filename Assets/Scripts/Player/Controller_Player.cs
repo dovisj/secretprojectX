@@ -8,7 +8,10 @@ public class Controller_Player : MonoBehaviour
 {
     [SerializeField] private Behavior_Grab_Zone script_grab_zone = null;
     [SerializeField] private Transform ref_hold_location = null;
+    [SerializeField] private Animator ref_player_animator = null;
 
+    [SerializeField] private string[] tag_holdables;
+    [SerializeField] private string[] tag_interactable;
     [SerializeField] private float move_speed = 0f;
     [SerializeField] private float time_human_control_seconds = 0f;
     [SerializeField] private float time_ai_control_seconds = 0f;
@@ -20,6 +23,7 @@ public class Controller_Player : MonoBehaviour
     private GameObject ref_held_object = null;
 
     private string tag_held_original = ""; // This is to ensure the player doesn't treat the held object
+    private LayerMask layer_held_original; // This makes sure selection helper doesn't collide with held objects
     private float input_h_axis = 0f;
     private float input_v_axis = 0f;
     private float last_control_change_time = 0f;
@@ -30,46 +34,51 @@ public class Controller_Player : MonoBehaviour
 
     public void ProcessInteract()
     {
-        if (ref_held_object == null) // Currently not holding an object
+        // Check if there's an object 
+        GameObject ref_obj = script_grab_zone.GetGrabObj();
+
+        if (ref_obj != null)
         {
-            // Check if there's an object 
-            ref_held_object = script_grab_zone.GetGrabObj();
+            // Check if it's interactable and act on it if it is
+            Interactable(ref_obj);
+
+            // Check if it's holdable and act on it if it is; an object can be both 
+            Holdable(ref_obj);
+        }
+        else // Place held object if holding one
+        {
             if (ref_held_object != null)
             {
-                tag_held_original = ref_held_object.tag;
-                ref_held_object.tag = "Held";
-                ref_held_object.transform.parent = transform.parent;
-            }
-        }
-        else // Already holding an object, check if placeable
-        {
-            /*
-           RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, 8f, Vector2.zero,10f,PlantManager.Instance.PlantPlotLayerMask);
-           foreach (RaycastHit2D hit in hits)
-           {
-               if (hit.collider != null)
+                if (script_grab_zone.Place(ref_held_object)) // Returns true if successfully placed
+                {
+                    ref_held_object.tag = tag_held_original;
+                    ref_held_object.layer = layer_held_original;
+                    ref_held_object = null;
+                }
+
+                /*
+               RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, 8f, Vector2.zero,10f,PlantManager.Instance.PlantPlotLayerMask);
+               foreach (RaycastHit2D hit in hits)
                {
-                   PlantingPlot plot = hit.collider.GetComponent<PlantingPlot>();
-                   if (plot.isTaken)
+                   if (hit.collider != null)
                    {
-                       //Process Wattering, and things.
-                   };
-                   if (script_grab_zone.Place(ref_held_object, plot))
+                       PlantingPlot plot = hit.collider.GetComponent<PlantingPlot>();
+                       if (plot.isTaken)
+                       {
+                           //Process Wattering, and things.
+                       };
+                       if (script_grab_zone.Place(ref_held_object, plot))
+                       {
+                           ref_held_object = null;
+                           break;
+                       }
+                   }else if (script_grab_zone.Place(ref_held_object)) // Returns true if successfully placed
                    {
                        ref_held_object = null;
                        break;
                    }
-               }else if (script_grab_zone.Place(ref_held_object)) // Returns true if successfully placed
-               {
-                   ref_held_object = null;
-                   break;
                }
-           }
-           */
-            if (script_grab_zone.Place(ref_held_object)) // Returns true if successfully placed
-            {
-                ref_held_object.tag = tag_held_original;
-                ref_held_object = null;
+               */
             }
         }
     }
@@ -142,5 +151,37 @@ public class Controller_Player : MonoBehaviour
         float vel_y = input_v_axis * move_speed * Time.fixedDeltaTime;
 
         ref_rbody.velocity = new Vector2(vel_x, vel_y);
+
+        transform.localScale = new Vector2(Mathf.Sign(vel_x), transform.localScale.y);
+        ref_player_animator.SetFloat("abs_vel_x", Mathf.Abs(vel_x));
+        ref_player_animator.SetFloat("vel_y", vel_y);
+    }
+
+    private void Interactable(GameObject ref_obj)
+    {
+
+    }
+
+    private void Holdable(GameObject ref_obj)
+    {
+        bool can_hold = false;
+
+        foreach (string str in tag_holdables)
+        {
+            if (ref_obj.tag == str)
+            {
+                can_hold = true;
+            }
+        }
+
+        if (can_hold && ref_held_object == null) // Change here and add stack structure if more than one items can be held at once
+        {
+            tag_held_original = ref_obj.tag;
+            layer_held_original = ref_obj.layer;
+            ref_obj.tag = "Held";
+            ref_obj.layer = LayerMask.NameToLayer("Held");
+            ref_held_object = ref_obj;
+            //ref_held_object.transform.parent = transform.parent; // What is this line for?
+        }
     }
 }

@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592986603244831255}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.37378, y: -0.1465311, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 7}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -58,7 +58,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
 --- !u!114 &-6619442564664031176
 MonoBehaviour:
@@ -75,6 +75,7 @@ MonoBehaviour:
   _plantData: {fileID: 11400000, guid: 38778dbfc6f810042b5126a5c13f578d, type: 2}
   brancSizeVariations: 1
   branchPlacementRadius: 3
+  maxMutationCount: 3
   branchAnimCurve:
     serializedVersion: 2
     m_Curve:

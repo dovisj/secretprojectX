@@ -7,7 +7,6 @@ public class Behavior_Grab_Zone : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D ref_parent_rbody = null;
 
-    [SerializeField] private string[] tag_holdables;
     [SerializeField] private float offset_distance = 0f;
     [SerializeField] private float start_move_angle_deg = 0f;
     [SerializeField] private float snap_size = 1f;
@@ -66,20 +65,7 @@ public class Behavior_Grab_Zone : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        bool can_hold = false;
-
-        foreach (string str in tag_holdables)
-        {
-            if (collision.tag == str)
-            {
-                can_hold = true;
-            }
-        }
-
-        if (can_hold)
-        {
-            obj_in_zone = collision.gameObject;
-        }
+        obj_in_zone = collision.gameObject;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -95,7 +81,8 @@ public class Behavior_Grab_Zone : MonoBehaviour
     private void Move()
     {
         // Move local position of grab zone by offset and move angle
-        transform.localPosition = starting_loc + (new Vector2(Mathf.Cos(move_angle), Mathf.Sin(move_angle)) * offset_distance);
+        // Parent flips localScale.x to flip sprite, so multiply by it to correct positioning
+        transform.localPosition = starting_loc + (new Vector2(Mathf.Cos(move_angle) * ref_parent_rbody.transform.localScale.x, Mathf.Sin(move_angle)) * offset_distance);
         // Snap to grid
         transform.position = new Vector2(Snap(transform.position.x), Snap(transform.position.y));
     }

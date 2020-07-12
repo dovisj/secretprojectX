@@ -18,6 +18,7 @@ namespace Plants
 
         public override void Interact(int action)
         {
+            Debug.Log("Interact");
             if (ref_placed_plant)
             {
                 // Unroot the plant
