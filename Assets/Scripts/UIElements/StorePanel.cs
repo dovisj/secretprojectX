@@ -28,7 +28,8 @@ namespace UIElements
                 StoreButton storeButton = Instantiate(buttonPrefab, buttonHolder.transform);
                 storeButton.description = data.description;
                 storeButton.nameText = data.itemName;
-                storeButton.priceText = data.price.ToString();
+                storeButton.priceText = data.buyPrice.ToString();
+                storeButton.sprite = data.sprite;
                 Button button = storeButton.GetComponent<Button>();
                 button.onClick.AddListener(delegate { BuyAction(guid); });
                 buttonList.Add(guid,button.gameObject);

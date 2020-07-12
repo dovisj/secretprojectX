@@ -13,9 +13,9 @@ namespace Managers
         public Dictionary<string, Mutation> knownMutations;
         public LayerMask PlantPlotLayerMask;
         public Sprite[] seedBags;
-        public GameObject[] branches;
-        public GameObject[] stems;
-        public GameObject[] extras;
+        //public GameObject[] branches;
+        //public GameObject[] stems;
+        //public GameObject[] extras;
         [SerializeField]
         private PlantData[] plantTypes;
         [SerializeField]
@@ -72,22 +72,22 @@ namespace Managers
         {
             return seedBags[Random.Range(0, seedBags.Length)];
         }
-
-        public GameObject GetRandomStem()
-        {
-            return stems[Random.Range(0, stems.Length)];
-        }
-    
-        public GameObject GetRandomBranch()
-        {
-            return branches[Random.Range(0, branches.Length)];
-        }
-    
-        public GameObject GetRandomExtra()
-        {
-            return extras[Random.Range(0, extras.Length)];
-        }
-        
+        //
+        // public GameObject GetRandomStem()
+        // {
+        //     return stems[Random.Range(0, stems.Length)];
+        // }
+        //
+        // public GameObject GetRandomBranch()
+        // {
+        //     return branches[Random.Range(0, branches.Length)];
+        // }
+        //
+        // public GameObject GetRandomExtra()
+        // {
+        //     return extras[Random.Range(0, extras.Length)];
+        // }
+        //
         public Color32 GetRandomBranchColor()
         {
             return BranchColorPallete[Random.Range(0, BranchColorPallete.Count)];

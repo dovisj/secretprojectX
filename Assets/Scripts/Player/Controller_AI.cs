@@ -8,6 +8,8 @@ public class Controller_AI : MonoBehaviour
 
     [SerializeField] private string[] tag_seekables;
     [SerializeField] private float ai_speed_multiplier = 1f;
+    [SerializeField] private float default_target_check_cooldown = 5f;
+    private float current_target_check_cooldown = 0;
     
     // How long to wait after interacting with a target before finding new target
     // (Essentially not doing anything; thus timeout can override this so this value should be smaller than the timeout)
@@ -17,7 +19,8 @@ public class Controller_AI : MonoBehaviour
     /*************************************************/
 
     private GameObject current_target = null;
-    
+    private Vector2 seek_pos;
+    private bool going_to_destination = false;
     private float speed = 0;
     private float last_seek_time = 0;
     private bool ai_control = false;
@@ -90,6 +93,7 @@ public class Controller_AI : MonoBehaviour
 
             last_seek_time = Time.time;
         }
+        current_target_check_cooldown -= Time.deltaTime;
     }
 
     private void FixedUpdate()
@@ -99,10 +103,19 @@ public class Controller_AI : MonoBehaviour
             return;
         }
 
-        Vector2 seek_pos = current_target.transform.position;
-
-        Debug.DrawLine(transform.position, seek_pos);
+       // if (!going_to_destination)
+       // {
+            seek_pos = current_target.transform.position;
+            going_to_destination = true;
+       // }
         transform.position = Vector2.MoveTowards(transform.position, seek_pos, speed * Time.fixedDeltaTime);
+        // if (Vector3.Distance(transform.position, seek_pos) < 0.05f)
+        // {
+        //     going_to_destination = false;
+        //     // Reset target
+        //     current_target = null;
+        //     last_seek_time = Time.time;
+        // }
     }
 
     private void OnTriggerStay2D(Collider2D collider) // Use TriggerStay because same target could be chosen again (static Plots, ect)
@@ -121,7 +134,6 @@ public class Controller_AI : MonoBehaviour
         {
             return;
         }
-
         CheckTarget(collision.collider);
     }
 
@@ -129,9 +141,33 @@ public class Controller_AI : MonoBehaviour
     {
         if (collider.gameObject.GetInstanceID() == current_target.GetInstanceID())
         {
+            float randomNum = Random.Range(1, 100);
             // Do interaction
-            collider.gameObject.GetComponent<Interactable>().Interact(ref script_controller_player.GetRefHeld(),
+            if(randomNum > 50)
+            {
+                collider.gameObject.GetComponent<Interactable>().Interact(ref script_controller_player.GetRefHeld(),
                     ref script_controller_player.GetHeldOGTag(), ref script_controller_player.GetHeldOGLayer());
+            }
+            else
+            {
+                collider.gameObject.GetComponent<Interactable>().InteractEvil(ref script_controller_player.GetRefHeld(),
+                    ref script_controller_player.GetHeldOGTag(), ref script_controller_player.GetHeldOGLayer());
+            }
+
+            if (randomNum > 95)
+            {
+                Debug.Log("Dropping");
+                GameObject held = script_controller_player.GetRefHeld();
+                if (held != null)
+                {
+                    Behavior_Grab_Zone grabZone = script_controller_player.GetRefGrabZone();
+                    if (grabZone.Place(held)) // Returns true if successfully placed
+                    {
+                        script_controller_player.DropItem();
+                    }
+                }
+            }
+
 
             // Reset target
             current_target = null;

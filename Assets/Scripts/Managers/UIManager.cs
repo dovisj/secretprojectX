@@ -1,7 +1,9 @@
 ﻿
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Managers;
+using MEC;
 using Plants;
 using Store;
 using TMPro;
@@ -10,9 +12,12 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    private Queue<string> messageQueue;
     protected static UIManager instance;
     [SerializeField]
-    private StorePanel storePanel;
+    public StorePanel storePanel;
+    [SerializeField]
+    private MessageCenter messageCenter;
     [SerializeField]
     private TextMeshProUGUI storeTimer;
     [SerializeField]
@@ -36,6 +41,7 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
+        messageQueue = new Queue<string>();
         StoreManager.Instance.onStockAdded += AddToStorePanel;
         StoreManager.Instance.onStockRemoved += RemoveFromStorePanel;
     }
@@ -58,5 +64,17 @@ public class UIManager : MonoBehaviour
     public void SetStoreTimer(string time)
     {
         storeTimer.text = time;
+    }
+
+    public void SendAMessage(string message)
+    {
+        Timing.RunCoroutine(SetMessage(message));
+    }
+
+    IEnumerator<float> SetMessage(string message)
+    {
+        messageCenter.SetMessage(message);
+        yield return Timing.WaitForSeconds(3);
+        messageCenter.SetMessage("");
     }
 }

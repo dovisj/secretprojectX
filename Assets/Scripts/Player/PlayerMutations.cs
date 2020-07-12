@@ -13,7 +13,7 @@ namespace Player
         {
             queuedMutations = new Queue<Mutation>();
             Timing.RunCoroutine(CheckMutations(), Segment.SlowUpdate);
-            AddMutation(new MutationEffectRainbow());
+            AddMutation(new MutationEffectResize());
         }
 
 

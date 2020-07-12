@@ -5,9 +5,11 @@ namespace Store
 {
     public class StoreItem
     {
-        public int price;
+        public int buyPrice;
+        public int sellPrice;
         public string itemName;
         public string description;
+        public Sprite sprite;
         public enum ItemType
         {
             PLANT,
@@ -22,9 +24,10 @@ namespace Store
         {
             itemType = ItemType.PLANT;
             this.plantData = plantData;
-            price = plantData.price;
-            itemName = plantData.name;
+            buyPrice = plantData.price;
+            itemName = plantData.plantName;
             description = plantData.description;
+            sprite = plantData.seedSprite;
         }
         
         public StoreItem()

@@ -9,6 +9,10 @@ TagManager:
   - Plot
   - Test
   - Planted
+  - Water
+  - WaterCan
+  - DropZone
+  - Store
   layers:
   - Default
   - TransparentFX
@@ -26,8 +30,8 @@ TagManager:
   - Held
   - Planted
   - Test
-  - 
-  - 
+  - Building
+  - Dropzone
   - 
   - 
   - 

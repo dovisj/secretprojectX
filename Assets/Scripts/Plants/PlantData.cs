@@ -13,9 +13,13 @@ namespace Plants
         public List<Mutation> mutationEffects;
         public float spawnChance = 1;
         public float delayBetweenStages = 0.01f;
-        public int waterNeeds = 0;
+        public int waterNeeds = 1;
         public int fertilizerNeeds;
         public int maxGrowthStages = 3;
+        public PlantSprite plantSprite;
+        public Sprite deadPlant;
+        public Sprite seedSprite;
+        public float growthSpeed=1;
 
         public void Randomize()
         {

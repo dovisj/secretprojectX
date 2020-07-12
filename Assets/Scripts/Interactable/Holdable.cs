@@ -15,6 +15,19 @@ public class Holdable : Interactable
             ref_game_obj.tag = "Held";
             ref_game_obj.layer = LayerMask.NameToLayer("Held");
             ref_held_obj = ref_game_obj;
+            if (original_tag == "Plant")
+            {
+                SoundManager.Instance.PlayRandomFlowerGetSound();
+            }
         }
+    }
+
+    public override void InteractEvil(ref GameObject ref_held_obj, ref string original_tag, ref LayerMask original_layer)
+    {
+    }
+
+    public override void StopInteracting()
+    {
+        GetComponent<Rigidbody2D>().simulated = true;
     }
 }

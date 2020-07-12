@@ -34,12 +34,13 @@ public class Controller_Player : MonoBehaviour
     public ref GameObject GetRefHeld() {return ref ref_held_object;}
     public ref string GetHeldOGTag() { return ref tag_held_original; }
     public ref LayerMask GetHeldOGLayer() { return ref layer_held_original; }
+    
+    public ref Behavior_Grab_Zone GetRefGrabZone() {return ref script_grab_zone;}
 
     public void ProcessInteract()
     {
         // Check if there's an object 
         GameObject ref_obj = script_grab_zone.GetGrabObj();
-
         if (ref_obj != null)
         {
             // Check if it's interactable and act on it if it is
@@ -54,9 +55,7 @@ public class Controller_Player : MonoBehaviour
             {
                 if (script_grab_zone.Place(ref_held_object)) // Returns true if successfully placed
                 {
-                    ref_held_object.tag = tag_held_original;
-                    ref_held_object.layer = layer_held_original;
-                    ref_held_object = null;
+                    DropItem();
                 }
 
                 /*
@@ -86,6 +85,14 @@ public class Controller_Player : MonoBehaviour
         }
     }
 
+    public void DropItem()
+    {
+        ref_held_object.tag = tag_held_original;
+        ref_held_object.layer = layer_held_original;
+        ref_held_object.GetComponent<Interactable>().StopInteracting();
+        ref_held_object = null;
+    }
+
     private void Awake()
     {
         ref_rbody = this.GetComponent<Rigidbody2D>();
@@ -113,11 +120,15 @@ public class Controller_Player : MonoBehaviour
             // Visual differentiation, temporary TODO
             if (ai_control)
             {
+                SoundManager.Instance.PlayUnderControlMusic();
+                Debug.Log("AI taken control");
                 script_grab_zone.gameObject.SetActive(false);
                 ref_sprite_renderer.color = Color.red;
             }
             else
             {
+                SoundManager.Instance.PlayChillMusic();
+                Debug.Log("Player taken control");
                 script_grab_zone.gameObject.SetActive(true);
                 ref_sprite_renderer.color = Color.white;
             }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20749143, g: 0.21147497, b: 0.14576834, a: 1}
+  m_IndirectSpecularColor: {r: 0.20749113, g: 0.2114747, b: 0.14576823, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -692,7 +692,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 192, y: 108}
+    oldSize: {x: 20, y: 11.25}
     newSize: {x: 60, y: 33.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1274,6 +1274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storePanel: {fileID: 1965810180}
+  storeTimer: {fileID: 731729948}
   storeDescription: {fileID: 657431452}
 --- !u!1 &845200096
 GameObject:
@@ -3458,6 +3459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxStock: 4
+  maxStockTimer: 120
 --- !u!1 &1887128920
 GameObject:
   m_ObjectHideFlags: 0

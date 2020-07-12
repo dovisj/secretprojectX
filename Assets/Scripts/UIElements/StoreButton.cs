@@ -10,7 +10,18 @@ namespace UIElements
         [SerializeField] public string priceText;
         [SerializeField] public string nameText;
         [SerializeField] public string description;
+        public Sprite sprite;
         private Button button;
+
+        public Sprite Sprite
+        {
+            get => sprite;
+            set
+            {
+                sprite = value;
+                GetComponentInChildren<SpriteRenderer>().sprite = sprite;
+            }
+        }
 
         private void Awake()
         {

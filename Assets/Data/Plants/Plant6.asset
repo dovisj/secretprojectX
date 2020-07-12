@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04dbb008dc91b56419a2027569fc194d, type: 3}
+  m_Name: Plant6
+  m_EditorClassIdentifier: 
+  plantName: Xuzerof Leaf
+  description: 
+  price: 99
+  spawnChance: 1
+  delayBetweenStages: 1
+  waterNeeds: 100
+  fertilizerNeeds: 0
+  maxGrowthStages: 3
+  plantSprite: {fileID: 11400000, guid: ef112d94feb13734c9f9c333b83d632b, type: 2}
+  deadPlant: {fileID: 1912217488309841562, guid: 738518d46c7dd074a9099983a69b52e9,
+    type: 3}
+  seedSprite: {fileID: 6536329979813789662, guid: d975e815119f66841a1581a555d9e4f0,
+    type: 3}
+  growthSpeed: 100

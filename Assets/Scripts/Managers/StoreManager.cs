@@ -28,6 +28,8 @@ namespace Managers
         public OnStockRemoved onStockRemoved;
         public delegate void OnItemBought(Guid guid, StoreItem storeItem);
         public OnItemBought onItemBought;
+        public delegate void OnItemSold(Plant plantData);
+        public OnItemSold onItemSold;
 
         public static StoreManager Instance
         {
@@ -98,22 +100,46 @@ namespace Managers
         {
             StoreItem storeItem;
             if (!currentStock.TryGetValue(guid, out storeItem)) return;
-            if (AvailableCurrency - storeItem.price < 0)
+            if (AvailableCurrency - storeItem.buyPrice < 0)
             {
                 Debug.Log("STORE_NOT_ENOUGH_CASH");
                 EventManager.TriggerEvent("STORE_NOT_ENOUGH_CASH");
             }
             else
             {
-                AvailableCurrency -= storeItem.price;
-                Debug.Log("Bought:: "+storeItem.itemName+" for:: "+storeItem.price);
+                AvailableCurrency -= storeItem.buyPrice;
+                Debug.Log("Bought:: "+storeItem.itemName+" for:: "+storeItem.buyPrice);
+                SoundManager.Instance.PlayRandomWoosh();
                 onItemBought?.Invoke(guid,storeItem);
             }
         }
-
-        void Sell(Plant plant)
-        {
         
+        public void BuyRandom()
+        {
+            if (currentStock.Count > 0)
+            {
+                var first = currentStock.First();
+                Guid key = first.Key;
+                Buy(key);
+                UIManager.Instance.storePanel.RemoveStoreItem(key);
+            }
+        }
+        
+        
+
+        public void Sell(Plant plant)
+        {
+            if (plant.GrowthPercentage < 10)
+            {
+                AvailableCurrency += plant.Price/2;
+            }
+            else
+            {
+                AvailableCurrency += plant.Price;
+            }
+        
+            onItemSold?.Invoke(plant);
+            Destroy(plant.gameObject);
         }
 
         private void RemoveItem(Guid guid)
