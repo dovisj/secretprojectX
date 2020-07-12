@@ -13,6 +13,8 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     private Queue<string> messageQueue;
+    private bool Tutorials = false;
+    [SerializeField] private GameObject TutorialUI;
     protected static UIManager instance;
     [SerializeField]
     public StorePanel storePanel;
@@ -80,6 +82,7 @@ public class UIManager : MonoBehaviour
 
     public void ToggleTutorialMessages()
     {
-        
+        Tutorials = !Tutorials;
+        TutorialUI.SetActive(Tutorials);
     }
 }

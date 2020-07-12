@@ -954,6 +954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _plantData: {fileID: 11400000, guid: 38778dbfc6f810042b5126a5c13f578d, type: 2}
+  priceChangeOverGrowth: 200
   brancSizeVariations: 1
   branchPlacementRadius: 3
   maxMutationCount: 3
