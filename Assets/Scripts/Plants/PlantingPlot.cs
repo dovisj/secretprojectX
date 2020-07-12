@@ -17,7 +17,7 @@ namespace Plants
         }
         */
 
-        public override void Interact(ref GameObject ref_held_obj, string original_tag, LayerMask original_layer)
+        public override void Interact(ref GameObject ref_held_obj, ref string original_tag, ref LayerMask original_layer)
         {
             if (ref_held_obj == null) // Not holding anything
             {

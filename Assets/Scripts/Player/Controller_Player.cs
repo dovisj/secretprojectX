@@ -6,12 +6,13 @@ using UnityEngine;
 
 public class Controller_Player : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer ref_sprite_renderer = null;
     [SerializeField] private Behavior_Grab_Zone script_grab_zone = null;
     [SerializeField] private Transform ref_hold_location = null;
     [SerializeField] private Animator ref_player_animator = null;
 
     [SerializeField] private string[] tag_interactable;
-    [SerializeField] private string[] tag_holdables;
+    //[SerializeField] private string[] tag_holdables; // Changed holdables to be a type of interactables
     [SerializeField] private float move_speed = 0f;
     [SerializeField] private float time_human_control_seconds = 0f;
     [SerializeField] private float time_ai_control_seconds = 0f;
@@ -19,7 +20,6 @@ public class Controller_Player : MonoBehaviour
     /*************************************************/
 
     private Rigidbody2D ref_rbody = null;
-    private SpriteRenderer ref_sprite_renderer = null;
     private GameObject ref_held_object = null;
 
     private string tag_held_original = ""; // This is to ensure the player doesn't treat the held object
@@ -32,9 +32,8 @@ public class Controller_Player : MonoBehaviour
     public float GetSpeed() { return move_speed;}
     public bool GetAIControl() { return ai_control; }
     public ref GameObject GetRefHeld() {return ref ref_held_object;}
-    public string GetHeldOGTag() { return tag_held_original; }
-    public LayerMask GetHeldOGLayer() { return layer_held_original; }
-
+    public ref string GetHeldOGTag() { return ref tag_held_original; }
+    public ref LayerMask GetHeldOGLayer() { return ref layer_held_original; }
 
     public void ProcessInteract()
     {
@@ -47,7 +46,7 @@ public class Controller_Player : MonoBehaviour
             Interactable(ref_obj);
 
             // Check if it's holdable and act on it if it is; an object can be both 
-            Holdable(ref_obj);
+            //Holdable(ref_obj);
         }
         else // Place held object if holding one
         {
@@ -90,7 +89,7 @@ public class Controller_Player : MonoBehaviour
     private void Awake()
     {
         ref_rbody = this.GetComponent<Rigidbody2D>();
-        ref_sprite_renderer = this.GetComponent<SpriteRenderer>();
+        //ref_sprite_renderer = this.GetComponent<SpriteRenderer>();
     }
 
     private void Start()
@@ -100,7 +99,6 @@ public class Controller_Player : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(ref_held_object);
         // Check if it's time to change control modes
         float elapsed_time = Time.time - last_control_change_time;
         if (elapsed_time > (ai_control ? time_ai_control_seconds : time_human_control_seconds) && (ai_control ? time_human_control_seconds : time_ai_control_seconds) > 0)
@@ -112,13 +110,15 @@ public class Controller_Player : MonoBehaviour
             // Reset velocity
             ref_rbody.velocity = new Vector2(0f, 0f);
 
-            // Visual differentiation
+            // Visual differentiation, temporary TODO
             if (ai_control)
             {
-                ref_sprite_renderer.color = Color.black;
+                script_grab_zone.gameObject.SetActive(false);
+                ref_sprite_renderer.color = Color.red;
             }
             else
             {
+                script_grab_zone.gameObject.SetActive(true);
                 ref_sprite_renderer.color = Color.white;
             }
         }
@@ -147,19 +147,20 @@ public class Controller_Player : MonoBehaviour
             ref_held_object.transform.position = ref_hold_location.transform.position;
         }
 
-        if (ai_control)
+        if (!ai_control)
         {
-            return;
+            float vel_x = input_h_axis * move_speed * Time.fixedDeltaTime;
+            float vel_y = input_v_axis * move_speed * Time.fixedDeltaTime;
+
+            ref_rbody.velocity = new Vector2(vel_x, vel_y);
         }
 
-        float vel_x = input_h_axis * move_speed * Time.fixedDeltaTime;
-        float vel_y = input_v_axis * move_speed * Time.fixedDeltaTime;
-
-        ref_rbody.velocity = new Vector2(vel_x, vel_y);
-
-        transform.localScale = new Vector2(Mathf.Sign(vel_x), transform.localScale.y);
-        ref_player_animator.SetFloat("abs_vel_x", Mathf.Abs(vel_x));
-        ref_player_animator.SetFloat("vel_y", vel_y);
+        // Handles for the AI part as well
+        float rbody_vel_x = ref_rbody.velocity.x;
+        float rbody_vel_y = ref_rbody.velocity.y;
+        transform.localScale = new Vector2(Mathf.Sign(rbody_vel_x), transform.localScale.y);
+        ref_player_animator.SetFloat("abs_vel_x", Mathf.Abs(rbody_vel_x));
+        ref_player_animator.SetFloat("vel_y", rbody_vel_y);
     }
 
     private void Interactable(GameObject ref_obj)
@@ -176,12 +177,13 @@ public class Controller_Player : MonoBehaviour
 
         if (can_interact)
         {
-            ref_obj.GetComponent<Interactable>().Interact(ref ref_held_object, tag_held_original, layer_held_original);
+            ref_obj.GetComponent<Interactable>().Interact(ref ref_held_object, ref tag_held_original, ref layer_held_original);
         }
     }
 
     private void Holdable(GameObject ref_obj)
     {
+        /*
         bool can_hold = false;
 
         foreach (string str in tag_holdables)
@@ -201,5 +203,6 @@ public class Controller_Player : MonoBehaviour
             ref_held_object = ref_obj;
             //ref_held_object.transform.parent = transform.parent; // What is this line for?
         }
+        */
     }
 }

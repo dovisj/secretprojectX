@@ -515,16 +515,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cdd9d43c6fcd3f47b2f9a91bf58ccb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ref_sprite_renderer: {fileID: 1740351573}
   script_grab_zone: {fileID: 5934701562313672526}
   ref_hold_location: {fileID: 5934701563658201180}
   ref_player_animator: {fileID: 1158345275167916578}
   tag_interactable:
-  - Plot
-  tag_holdables:
   - Plant
+  - Plot
   move_speed: 250
-  time_human_control_seconds: 5
-  time_ai_control_seconds: 0
+  time_human_control_seconds: 0
+  time_ai_control_seconds: 5
 --- !u!114 &5934701562269780561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,7 +538,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script_controller_player: {fileID: 5934701562269780560}
+  tag_seekables:
+  - Plant
+  - Plot
   ai_speed_multiplier: 0.1
+  seeking_delay_seconds: 0
+  seeking_timeout_seconds: 10
 --- !u!61 &5934701562269780566
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -598,7 +603,7 @@ GameObject:
   - component: {fileID: 5934701562313672526}
   - component: {fileID: 5934701562313672520}
   - component: {fileID: 5934701562313672521}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Grab_zone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
