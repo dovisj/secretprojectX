@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Farm.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
-    path: Assets/Scenes/Test_Dovis.unity
-    guid: 1d243376485560347aa3031a8444afd0
+    path: Assets/Scenes/Intro.unity
+    guid: 47f8bd13e614684479dd8159c567387a
+  - enabled: 1
+    path: Assets/Scenes/Final_Farm.unity
+    guid: 88961673edee0364693f8a1ac352eef3
+  - enabled: 1
+    path: Assets/Scenes/Loss.unity
+    guid: beb8410412c316a4596540b69d24caa0
   m_configObjects: {}

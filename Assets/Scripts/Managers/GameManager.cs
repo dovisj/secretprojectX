@@ -16,9 +16,9 @@ namespace Managers
 
         private void CheckEndCondition(Guid guid, StoreItem storeItem)
         {
-            if (StoreManager.Instance.AvailableCurrency <= 0)
+            if (StoreManager.Instance.AvailableCurrency < -1000)
             {
-                SceneManager.LoadScene (3);
+                SceneManager.LoadScene (2);
             }
         }
         
@@ -26,7 +26,7 @@ namespace Managers
         {
             if (StoreManager.Instance.AvailableCurrency > 10000)
             {
-                SceneManager.LoadScene (4);
+                SceneManager.LoadScene (0);
             }
         }
     }

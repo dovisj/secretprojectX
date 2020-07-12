@@ -231,7 +231,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -37.247124, y: -61.81705}
+  m_Offset: {x: -38.001118, y: -106.306404}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -242,7 +242,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 62.967987, y: 122.63419}
+  m_Size: {x: 69.85781, y: 33.655502}
   m_EdgeRadius: 0
 --- !u!1 &45426638 stripped
 GameObject:
@@ -1776,8 +1776,10 @@ MonoBehaviour:
   wooshSounds:
   - {fileID: 8300000, guid: 07981b0f72aea594698d3102999fcb7a, type: 3}
   - {fileID: 8300000, guid: a26905b5eaecd584dac57edea8480d64, type: 3}
-  chillMusic: {fileID: 8300000, guid: 2cf4e2bc78f545d419b2fb1edc7405f5, type: 3}
-  controlMusic: {fileID: 8300000, guid: 87e7e56d4fba75b47b65db5cc445e198, type: 3}
+  chillMusic: {fileID: 8300000, guid: 28e06a30fec0a4e48a711ae9830c8516, type: 3}
+  controlMusic: {fileID: 8300000, guid: 453cc5a16526c68468b13c16762a192f, type: 3}
+  sellSound: {fileID: 8300000, guid: 9e5a69e4effa54842b754f993e65e07b, type: 3}
+  fillWaterCan: {fileID: 8300000, guid: 4a7a4b4c09e00b2458775e9e0e6079c1, type: 3}
   itemGrabSound: {fileID: 8300000, guid: 45935f31d97d63a4281783957df77c64, type: 3}
 --- !u!82 &659387861
 AudioSource:

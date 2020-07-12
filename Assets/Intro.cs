@@ -11,7 +11,7 @@ public class Intro : MonoBehaviour
     {
         if (Input.anyKey)
         {
-            SceneManager.LoadScene (0);
+            SceneManager.LoadScene (1);
         }
     }
 }
